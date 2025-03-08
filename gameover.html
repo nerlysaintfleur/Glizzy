@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Over</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <h1>Game Over!</h1>
+      <p>You collected <span id="final-score">0</span> hotdogs.</p>
+      <p>Looks like you're a sucker for glizzies after all! 🌭</p>
+      <button onclick="window.location.href='index.html'">Play Again</button>
+    </div>
+    <script>
+      document.getElementById("final-score").textContent =
+        localStorage.getItem("finalScore") || 0;
+    </script>
+  </body>
+</html>
